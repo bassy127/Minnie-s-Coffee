@@ -1,0 +1,244 @@
+.cover{
+    width: 100vw;
+    background-color: #f5f5f5;
+    .cover-title{
+        padding: 15px 20px 0;
+        height: 64px;
+        line-height: 64px;
+        color: #666;
+        i{
+            letter-spacing: 2px;
+        }
+        i.shopName{
+            letter-spacing: 5px;
+            font-weight: 500;
+            color: #000;
+            margin-right: 5px;
+        }
+    }
+    p{
+        min-height: 150px;
+        line-height: 150px;
+        text-align: center;
+        color: #7d7d5f99;
+        font-weight: 600;
+        font-size: 20px;
+    }
+    img{
+        width: 300px;
+        display: block;
+        margin: 0px auto 0;
+    }
+    .dot{
+        height: 25vh;
+        display: flex;
+        justify-content: center;
+        align-items:flex-end;
+        margin-bottom: 25px;
+        div{
+            line-height: 20vh;
+            i{
+                width: 6px;
+                height: 6px;
+                display: block;
+                background-color: #666;
+                border-radius: 50%;
+                text-align: center;
+                margin: 10px;
+                animation: moveDot 0.6s linear 1s infinite alternate-reverse;
+                &:first-child{
+                    animation-delay: -0.2s; // 延迟时间 负数直接跳过 -> 0.2s
+                }
+                &:last-child{
+                    animation-delay: -0.6s; // 延迟时间 负数直接跳过 -> 0.6s
+                }
+            }
+        }
+    }
+    .cover_nav{
+        margin-bottom: 32px;
+        .cover_about{
+            margin-top: 10px;
+            margin-bottom: 10px;
+            font-size: 12px;
+            font-weight: 700;
+            text-align: center;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #000;
+        }
+    
+        .oblique_line {
+            display: flex;
+            width: 100px;
+            height: 10px;
+            margin-right: auto;
+            margin-left: auto;
+            padding-right: 5px;
+            justify-content: center;
+            .line{
+                width: 15px;
+                height: 1px;
+                margin-left: -4px;
+                // background-image: -webkit-gradient(linear,left top,left bottom,from(#000),to(#000));
+                background-image: linear-gradient(180deg,#000,#000);
+                transform: rotate(-45deg)
+            }
+        }
+
+    }
+
+    .content{
+        padding: 0 24px 32px;
+        h2{
+            color: #000;
+            font-family: Radikal,sans-serif;
+            margin: 20px 0px 10px;
+            font-size: 30px;
+            font-weight: 500;
+            line-height: 40px;
+            text-align: center;
+        }
+        .content-line{
+            width: 40px;
+            height: 5px;
+            margin: 0 auto;
+            background:linear-gradient(90deg,#303a2b,#a8ade6) ;
+            margin-bottom: 32px;
+        }
+
+        .content-card{
+            padding: 32px 0px 24px;
+            margin-bottom: 20px;
+            background-color: #fff;
+            text-align: center;
+            position: relative;
+
+            img.title-bg{
+                width: 55%;
+                margin-bottom: 16px;
+                
+            }
+            span{
+                margin-top: 8px;
+                margin-bottom: 8px;
+                color: #000;
+                font-size: 12px;
+                font-weight: 500;
+                letter-spacing: 3px;
+                text-transform: uppercase;
+                &::before{
+                    content: "";
+                    display: block;
+                    width: 60px;
+                    height: 50px;
+                    position: absolute;
+                    top: 15px;
+                    left: 40px;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    background-position: 50%;
+                }
+            }
+            .t-1::before{
+                background-image: url(../images/login/bg1.svg);
+                animation: moveRote 3s linear infinite;
+            }
+            .t-2::before{
+                left: 225px;
+                background-image: url(../images/login/bg3.svg);
+                animation: moveRoteReverse 2s linear infinite;
+            }
+            .t-3::before{
+                background-image: url(../images/login/bg2.svg);
+                animation: moveRote 3s linear infinite;
+            }
+            img.div-line{
+                width: 23px;
+                height: 3px;
+                margin: 8px auto 16px;
+                display: block;
+            }
+            .p{
+                color: #000;
+                font-size: 14px;
+                line-height: 30px;
+                font-weight: 100;
+            }
+        }
+    }
+
+}
+@keyframes moveDot{
+    from{
+        transform: scale(0.4);
+    }
+    to{
+        transform: scale(1.2);
+    }
+}
+@keyframes moveRote{
+    0%{
+        transform: rotate(0);
+    }
+    30%,90%{
+        transform: rotate(180deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+@keyframes moveRoteReverse{
+    0%{
+        transform: rotate(360deg);
+    }
+    30%,90%{
+        transform: rotate(180deg);
+    }
+    100%{
+        transform: rotate(0);
+    }
+}
+
+.menu{
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #fff;
+    z-index: 100;
+    box-shadow: 0px 0px 100px 0px rgba(0, 0, 0, .5);
+    div.menu-box{
+        margin: 10px auto;
+    }
+    span{
+        font-size: 12px;
+        font-family: Radikal,sans-serif;
+        text-transform: uppercase;
+        color: #000;
+        font-weight: 550px;
+    }
+    .line{
+        width: 26px;
+        height: 2px;
+        margin: 0 auto;
+        margin-bottom: 5px;
+        background-color: #000;
+    }
+    i.close{
+        line-height: 50px;
+        font-size: 28px;
+        font-weight: 200px;
+    }
+}
+@keyframes fadeIn{
+    0% { opacity: 0 }
+	100% { opacity: 1 }
+}
+@keyframes fadeOut{
+    0% { opacity: 1 }
+	100% { opacity: 0 }
+}

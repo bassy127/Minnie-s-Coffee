@@ -1,0 +1,190 @@
+.home-box{
+    position: relative;
+    min-height: 100vh;
+    // 输入框
+    .searchFixed{
+        width: 100vw;
+        height: 56px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 100;
+        padding-left: 0.4rem;
+        background-color: #fff;
+
+    }
+    .inp{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 56px;
+        position: relative;
+        // padding: 0px 20px;
+        background-color: #fff;
+        width: 100vw;
+    
+        .logo{
+            // padding: 0px 10px;
+            width:60px;
+            height: 30px;
+
+            font-size: 18px;
+
+            position: absolute;
+            z-index: 1;
+        }
+        
+        .van-search--show-action{
+            padding-left: 0px;
+        }
+        
+    
+        .van-search__content--round{
+            // padding: 0px;
+            border: 1px solid #000;
+            background-color: #fff;
+        }
+        .searchBox{
+            width: 75%;
+        }
+        
+        form{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .inp .van-search--show-action {
+        padding-left: 0;
+        position: absolute;
+        right: 15px;
+        top: 0;
+        z-index: 2;
+    }
+
+    // 轮播图
+    .banner{
+        padding: 10px 20px;
+        border: 1px solid #000;
+        border-top-right-radius: 35px;
+        border-bottom-left-radius: 35px;
+        margin-top: 70px;
+        .indicator{
+            position: absolute;
+            right: 10px;
+            bottom: 10px;
+        }
+        .indicator-line{
+            width: 15px;
+            height: 2px;
+            margin-right: 5px;
+            background-color: #ccc;
+        }
+        .indicator-line.active{
+            background-color: #000;
+            width: 25px;
+        }
+
+        .van-swipe{
+            border-top-left-radius: 35px;
+            border-bottom-right-radius: 35px;
+        }
+    }
+
+    // 分割线
+    .split-line{
+        padding: 20px;
+        overflow: hidden;
+        .linebox{
+            position: relative;
+            height: 40px;
+            .line{
+                position: absolute;
+                width: 100%;
+                height: 1px;
+                background-color: #000;
+
+                &:nth-of-type(1){
+                    left: -100%;
+                    animation: lineMove1 5.5s linear infinite
+                }
+                &:nth-of-type(2){
+                    left: 100%;
+                    margin-top: 10px;
+                    animation: lineMove2 9s linear infinite 
+                }
+                &:nth-of-type(3){
+                    left: -100%;
+                    margin-top: 20px;
+                    animation: lineMove1 7s linear infinite 
+                }
+            }
+        }
+    }
+
+    // 热门推荐
+    .hot{
+        padding: 0px 15px;
+        .title{
+            padding: 8px 24px;
+            margin: 0 auto 30px;
+            display: inline-block;
+            color: #000;
+            font-size: 16px;
+            border: 1px solid #000;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 30px;
+            &::after{
+                content: "";
+                display: block;
+                position: absolute;
+                bottom: -16px;
+                left: 50%;
+                transform: translateX(-50%);
+
+                // 三角形
+                width: 0;
+                height: 0;
+                border-top: 8px solid #000; /*这行去掉也行*/
+                border-bottom: 8px solid transparent;
+                border-right: 8px solid transparent;
+                border-left: 8px solid transparent;
+            }
+        }
+
+        .hot-box{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+    }
+
+    .search-s{
+        // z-index: 999;
+        margin-top: 65px;
+
+    }
+}
+
+
+// 线条动画
+@keyframes lineMove1{
+    0%{ left: -100%; }
+    100%{ left: 100%; }
+}
+@keyframes lineMove2{
+    0%{ left: 100%; }
+    100%{ left: -100%; }
+}
+
+// 输入框动画
+@keyframes bounce-in {
+    to { width: 75%; }
+    from { width: 98%;  }
+} 
+  
+@keyframes bounce-out {  
+    to {  width: 98%;  }
+    from{ width: 75%; }
+}

@@ -1,0 +1,48 @@
+.myLike-box{
+    margin-top: 50px;
+    
+    min-height: 100vh;
+    box-sizing: border-box;
+    .like-box{
+        padding: 20px;
+        background-color: #f8f8f8;
+        min-height: 100vh;
+    }
+    .hot-box{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    // 热门推荐
+    .hot{
+        padding: 0px 15px;
+        .title{
+            padding: 8px 24px;
+            margin: 0 auto 30px;
+            display: inline-block;
+            color: #000;
+            font-size: 16px;
+            border: 1px solid #000;
+            position: relative;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 30px;
+            &::after{
+                content: "";
+                display: block;
+                position: absolute;
+                bottom: -16px;
+                left: 50%;
+                transform: translateX(-50%);
+
+                // 三角形
+                width: 0;
+                height: 0;
+                border-top: 8px solid #000; /*这行去掉也行*/
+                border-bottom: 8px solid transparent;
+                border-right: 8px solid transparent;
+                border-left: 8px solid transparent;
+            }
+        }
+    }
+}

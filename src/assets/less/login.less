@@ -1,0 +1,209 @@
+
+.login{
+    width: 100vw;
+    height: 100vh;
+    padding: 32px;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+
+    .van-nav-bar{
+        border: 0px;
+    }
+}
+
+// 线条-start
+.slide-line{
+    position: absolute;
+    width: 0px;
+    height: 0px;
+}
+.l-top{
+    left: -100%;
+    top: 16px;
+    width: 100vw;
+    height: 1px;
+    background-color: #000;
+    // transition: width 200ms ease 0s;
+    animation: line_top 8s linear infinite;    
+}
+@keyframes line_top{
+    0%{ left: -100%; }
+    50%,100%{ left: 100%; }
+}
+
+.l-right{    
+    right: 16px;
+    top: -100%;
+    width: 1px;
+    height: 100vh;
+    background-color: #000;
+    animation: line_right 8s linear infinite;
+    animation-delay: 2s;
+}
+@keyframes line_right{
+    0%{ top: -100%; }
+    50%,100%{ top: 100%; }
+}
+
+.l-bottom{
+    left: 100%;
+    bottom: 16px;
+    width: 100vw;
+    height: 1px;
+    background-color: #000;
+    animation: line_bottom 8s linear infinite;
+    animation-delay: 4s;
+}
+@keyframes line_bottom{
+    0%{ left: 100%; }
+    50%,100%{ left: -100%; }
+}
+
+.l-left{
+    left: 16px;
+    top: 100%;
+    width: 1px;
+    height: 100vh;
+    background-color: #000;
+    animation: line_left 8s linear infinite;
+    animation-delay: 6s;
+}
+@keyframes line_left{
+    0%{ top: 100%; }
+    50%,100%{ top: -100%; }
+}
+// 线条-end
+
+.cover-title{
+    color: #666;
+    div{
+        display: flex;
+        align-items: center;
+    }
+    i.head-img{
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        background-color: #ccc;
+        background-image: url(../images/myLogo2.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        transform: scale(1.2);
+
+        margin: 5px 10px;
+        margin-left: 0px;
+    }
+    span.head-text{
+        font-weight: 500;
+        font-size: 18px;
+        color: #999;
+    }
+    .van-nav-bar__left{
+        padding: 0;
+    }
+}
+
+
+.welcome-box{
+    width: 100%;
+    // display: flex;
+    // justify-content: center;
+    // align-content: start;
+    // flex-wrap: wrap;
+    .wc-box{
+        margin: auto;
+    }
+    .oblique_line {
+        display: flex;
+        // width: 200px;
+        height: 10px;
+        margin-top: 80px;
+        margin-left: -30px;
+        margin-bottom: 15px;
+        padding-right: 5px;
+        justify-content: center;
+        align-items: center;
+        .line{
+            width: 15px;
+            height: 1px;
+            margin-left: -4px;
+            // background-image: -webkit-gradient(linear,left top,left bottom,from(#000),to(#000));
+            background-image: linear-gradient(180deg,#000,#000);
+            transform: rotate(-45deg)
+        }
+        span{
+            margin-left: 10px;
+            font-size: 24px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #000;
+            font-weight: 300;
+        }
+    }
+    img{
+        width: 150px;
+        height: 80px;
+        display: block;
+        margin: 0 auto;
+    }
+}
+
+.login-box{
+    width: 100%;
+    margin-top: -2px;
+    border: 1px solid #000;
+    border-radius: 20px;
+    padding: 24px;
+    .van-cell{
+        padding-left:0px;
+        padding-right:0px;
+    }
+    .van-field__left-icon .van-icon{
+        font-size: 24px;
+    }
+    .van-field__right-icon .van-icon{
+        font-size: 24px;
+    }
+    .forget{
+        float: right;
+        span{
+            font-size: 12px;
+            color: #999;
+            padding-top: 10px;
+        }
+    }
+    .login-btn{
+        margin-top: 40px;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+    }
+    .vanbt{
+        margin-right: 30px;
+        .van-button__text{
+            color: #fff;
+        }
+    }
+
+
+}
+.regist-box{
+    // padding: 10px;
+    .vanbt{
+        margin: 0;
+    }
+}
+// 轻提示
+.van-toast--text .van-toast__text{
+    color: #fff;
+}
+// 加载提示
+.van-loading__circular circle {
+    color: #fff;
+}
+.van-toast__text{
+    color: #fff;
+}
+

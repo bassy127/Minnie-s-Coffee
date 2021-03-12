@@ -1,0 +1,109 @@
+.menu-box{
+    // 搜索输入框
+    .searchFixed{
+        width: 100vw;
+        height: 56px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 999;
+    }
+    .inp{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 56px;
+        position: relative;
+        padding: 0px 20px;
+        padding-right: 0px;
+        background-color: #fff;
+        width: 100vw;
+        border-bottom: 1px solid #000;
+    
+        .logo{
+            min-width: 110px;
+            line-height: 30px;
+            height: 30px;
+            flex: 1;
+            background-color: #fff;
+            color: #000;
+            font-size: 16px;
+            border: 1px solid #000;
+            border-top-left-radius: 50%;
+            border-bottom-right-radius: 50%;
+            padding: 0px 10px;
+
+            // 文字溢出隐藏
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .van-notice-bar__content{
+            font-size: 16px;
+        }
+        
+        .van-search--show-action{
+            padding-left: 0px;
+        }
+    
+        .van-search__content--round{
+            // padding: 0px;
+            border: 1px solid #000;
+            background-color: #fff;
+        }
+        .searchBox{
+            width: 65%;
+            padding: 0px;
+            margin: 10px 15px;
+        }
+    }
+    .inp .van-search--show-action {
+        padding-left: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 2;
+    }
+
+
+
+    // 左侧导航栏
+    .sidebar{
+        margin-top: 57px;
+        min-height: 100vh;
+        display: flex;
+    }
+    .product{
+        flex: 1;
+        padding: 15px;
+        height: 100%;
+    }
+
+
+
+
+
+
+
+    // 左侧栏样式
+    .van-sidebar{
+        border-right: 1px solid #000;
+        margin-left: 2px;
+        background-color: #f7f8fa;
+    }
+    .van-sidebar-item--select::before{
+        background-color: #000;
+    }
+    .van-sidebar-item--select, .van-sidebar-item--select:active{
+        color:#908888;
+    }
+
+
+
+    .search-s{
+        // z-index: 999;
+        margin-top: 50px;
+    }
+
+}
+

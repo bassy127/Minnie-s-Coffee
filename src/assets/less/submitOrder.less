@@ -1,0 +1,185 @@
+.submit-order{
+    background-color: #f5f5f5;
+    padding: 50px 0px;
+    height: 100vh;
+    box-sizing: border-box;
+    .order-top{
+        margin: 10px;
+        background-color: #fff;
+        padding:0px 10px 15px;
+        color: #555;
+        border-radius: 6px;
+        p{
+            padding: 20px 0 25px;
+        }
+        .p1{
+            display: flex;
+            align-items: center;
+            padding: 0px;
+            .name{
+                height: 35px;
+                line-height: 35px;
+                font-size: 16px;
+                color: #000;
+                margin-right: 25px;
+                
+                // 文字溢出 处理
+                max-width: 100px;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            .tel{
+                height: 35px;
+                line-height: 35px;
+                margin-right: 25px;
+            }
+            .default{
+                padding: 0px 8px;
+                background-color: #fff;
+                color: #333;
+                border: 1px solid #000;
+                border-radius: 26.64rem;
+                font-size: 12px;
+                line-height: 17px;
+            }
+        }
+        .p2{
+            padding: 7px 0px 0px;
+            color: #666;
+            font-size: 15px;
+            max-height: 70px;
+
+            letter-spacing: 1.5px;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -webkit-line-clamp: 3;
+        }        
+    }
+    .orderlist{
+        margin: 10px 10px 0px;
+        padding: 10px 10px 10px;
+        background-color: springgreen;
+        background-color: #fff;
+    }
+
+    .order{
+        background-color: #fff;
+        margin: 0px 10px 20px;
+        padding-bottom: 10px;
+        border-top: 1px #000 dotted;
+        padding-left: 10px;
+        padding-right: 18px;
+        color: #555;
+        border-radius: 6px;
+        position: relative;
+        &::before{
+            content: "";
+            display: block;
+            position: absolute;
+            width: 18px;
+            height: 18px;
+            background-color: #f5f5f5;
+            border-radius: 50%;
+            top: -9px;
+            left: -9px;
+        }
+        &::after{
+            content: "";
+            display: block;
+            position: absolute;
+            width: 18px;
+            height: 18px;
+            background-color: #f5f5f5;
+            border-radius: 50%;
+            top: -9px;
+            right: -9px;
+        }
+        p{
+            margin: 25px 0px 15px;
+        }
+        .pay{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .pay span:nth-of-type(2){
+            color: #000;
+            font-size: 18px;
+        }
+    }
+
+
+    // 选择地址
+    .arrow{
+        vertical-align: text-bottom;
+        margin-left: 5px;
+    }
+    // 结算按钮
+    .btn{
+        width: 100%;
+        background-color: #fff;
+        position: fixed;
+        bottom: 0px;
+        padding: 10px 0px;
+    }
+
+
+
+    // 插槽信息
+    .orderinfo{
+        color: #555;
+        font-size: 16px;
+        margin: 10px 0;
+    }
+    .number{
+        display: flex;
+        color: #555;
+        font-size: 16px;
+        margin: 10px 0;
+        justify-content: space-between;
+        align-items: center;
+        .finish{
+            .van-icon{
+                vertical-align: text-bottom;
+                margin-left: 8px;
+                font-size: 19px;
+            }
+        }
+    }
+
+
+    // 编辑按钮
+    .van-address-item__edit{
+        display: none;
+    }
+    // 单选框 样式
+    .van-address-item .van-radio__icon--checked .van-icon{
+        background-color: #999;
+        border-color: #999;
+    }
+    // 新增按钮
+    .van-button--danger{
+        background-color: #fff;
+        border-color: #000;
+        color: #000;
+    }
+    // 下边框
+    .van-address-item__value{
+        border-bottom: 1px solid #c1c1c1;
+        padding-bottom: 5px;
+    }
+    .van-address-item__address{
+        color: #555;
+        font-size: 15px;
+        letter-spacing: 1.5px;
+
+        // 文字溢出处理
+        max-height: 50px;
+        overflow: hidden;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+    }
+}

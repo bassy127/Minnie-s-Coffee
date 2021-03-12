@@ -1,0 +1,73 @@
+.order-item{
+    .itembox{
+        .card{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #fff;
+
+            margin-bottom: 15px;
+        }
+        .card .fr{
+            flex: 1;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            img{
+                width: 90px;
+                height: 100%;
+                margin-right: 15px;
+                border-radius: 10px;
+            }
+            .desc{
+                flex: 1;
+            }
+            .desc .cName{
+                font-size: 19px;
+                color: #444;
+                letter-spacing: 1.5px;
+                margin-bottom: 6px;
+
+                max-width: 230px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+            .desc .cName span{ 
+                color: #999;
+                letter-spacing: 0px;
+                margin-left: 10px;
+                font-size: 15px;
+            }
+            .desc .eName{
+                color: #999;
+                font-size: 14px;
+                text-transform: capitalize;
+                letter-spacing: 1px;
+
+                max-height: 0.90667rem;
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+            }
+            .desc .price-box{
+                padding: 15px 0px 0px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+            }
+            .desc .price-box .price{
+                color: #000;
+                font-size: 19px;
+            }
+            
+            .countBtn{
+                color: #555;
+            }
+        }
+    }
+}
+.fa-jpy:before{
+    margin-right: 3px;
+}
