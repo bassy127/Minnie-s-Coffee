@@ -7,13 +7,13 @@
                 <!-- <transition name="bounce"> -->
                     <form action="/">
                         <van-search class="searchBox"
+                            v-model="searchValue"
                             show-action
                             shape="round"
-                            clearable
+                            :clearable="false"
                             placeholder="请输入搜索关键词"
                             @input="getSearch"
-                            @focus="getFocus"
-                            @blur="getBlur"
+                            @clear="clearInp"
                         />
                     </form>
                 <!-- </transition> -->
@@ -87,6 +87,7 @@ import Search from "../components/Search.vue"
                 hotDatas:[],
 
                 // 搜索值
+                searchValue: '',
                 searchList:[],
                 showSearchResult: false
                 
@@ -188,6 +189,7 @@ import Search from "../components/Search.vue"
 
             // 获取搜索关键子
             getSearch(val){
+                this.showSearchResult = val ? true : false
                 this.$toast.loading({
                     message: "搜索中...",
                     forbidClick: true,
@@ -215,16 +217,22 @@ import Search from "../components/Search.vue"
                 });
             },
 
+            // 清空输入框
+            clearInp() {
+                this.searchValue = ''
+                this.getSearch()
+            },
+
             // 获取焦点
             getFocus(){
-                this.showSearchResult = true;
-
+                // this.showSearchResult = true;
                 // document.getElementsByClassName("searchBox")[0].style.width="98%"
                 // document.getElementsByClassName("searchBox")[0].style.animation="bounce-out 1s linear"
             },
             // 失去焦点
             getBlur(){
-                this.showSearchResult = false;
+                // this.searchValue = ''
+                // this.showSearchResult = false;
                 // document.getElementsByClassName("searchBox")[0].style.width="75%"
                 // document.getElementsByClassName("searchBox")[0].style.animation="bounce-in 1s linear"
             }
