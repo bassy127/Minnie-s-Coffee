@@ -6,7 +6,9 @@
         width: 100vw;
         height: 56px;
         position: fixed;
-        top: 0;
+        top: calc(0px + constant(safe-area-inset-bottom));
+        top: calc(0px + env(safe-area-inset-bottom));
+        top: 20px;
         left: 0;
         z-index: 100;
         padding-left: 0.4rem;

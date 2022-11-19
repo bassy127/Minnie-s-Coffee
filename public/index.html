@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0, viewport-fit=cover">
     <link rel="icon" href="<%= BASE_URL %>myLogo2.png">
     <title>Minnie's Coffee</title>
   </head>
@@ -11,3 +11,15 @@
     <div id="app"></div>
   </body>
 </html>
+<style>
+  @media screen and (orientation: portrait) {
+    body {
+      /* 防止页面被刘海遮住 */
+      /* // 兼容ios刘海屏 */
+      padding-top: calc(0px + constant(safe-area-inset-bottom));
+      padding-top: calc(0px + env(safe-area-inset-bottom));
+      /* 以防万一写一个你本身适配其他手机的 */
+      padding-top:20px;
+    }
+  }
+</style>
